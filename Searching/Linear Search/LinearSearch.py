@@ -11,7 +11,7 @@ while not found and i < length:                     # Keep looping while the tar
     else:
         i += 1                                      # Move to the next item if not found yet
 
-if found:
+if found:                                           # If the item was found, output a suitable message
     print("Item found at position " + str(i))
 else:
     print("Item not found!")
