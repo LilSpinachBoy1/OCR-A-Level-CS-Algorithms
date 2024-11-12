@@ -1,0 +1,15 @@
+// Create some data and a target
+data = ["Some data..."]
+
+found = False                                   // A boolean flag for efficiency
+i = 0                                           // A counter variable
+while true == False and i < data.length         // Loop until either the item is found, or the counter has searched the entire list
+    if data[i] == target then                   // If the current item is the target
+        found = True                            // Set the flag to true to exit the loop early
+    else                                        // If the item is not the target, increment the counter
+        i++
+
+if found == True then                           // If the item was found, output a suitable message
+    print("Found at position " + int(i))
+else
+    print("Not found!")
