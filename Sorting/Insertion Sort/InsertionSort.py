@@ -1,12 +1,12 @@
 # Create dataset
-data = ["Wicker Man", "The Smiler", "Th13teen", "Rita", "Oblivion", "Nemesis", "Galactica"]
+data = ["Wicker Man", "The Smiler", "Th13teen", "Rita", "Oblivion", "Nemesis", "Galactica", "Runaway Mine Train"]
 
-#TODO: This is awful and wrong
-for index in range(1, len(data)):
-    temp_store = data[index]
-    checking = index - 1
-    while checking > 0 and data[checking] < data[index]:
-        data[index] = data[checking]
-        checking -= 1
+for index in range(1, len(data)):                               # Iterate from the second item to the end of the list
+    temp_store = data[index]                                    # Store the item we are checking in a temporary variable
+    index2 = index                                              # Set index2 (the location of the item we are comparing to), to the same as the checked item
+    while index2 > 0 and data[index2 - 1] > temp_store:         # Work through the area of the list before the item being checked, entering if it is greater than the item being checked
+        data[index2] = data[index2 - 1]                         # Move the item bellow the current comparison into the location of the current comparison
+        index2 -= 1                                             # Decrement index2 in order to begin checking the next item down the list
+    data[index2] = temp_store                                   # Once we have found the correct location of the item being checked, put it back in the list
 
-    data[checking]
+print(data)                                                     # Print the sorted data
